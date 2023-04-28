@@ -3,7 +3,7 @@ Training Stable Diffusion to produce meebs
 
 ## What is a meeb?
 
-![Meeb](./site/meeb.png)
+![Meeb](readme/meeb.png)
 
 This is a meeb. He likes to use https://www.beemit.com.au/.
 
@@ -22,7 +22,6 @@ repo to a new branch when you're experimenting.
 rate, etc.
 * `./reg` - Regularization images. There's a lot, but these hopefully don't need to change
 much.
-* `./site` - Documentation and supporting files for the README.
 * `./*.json` - Config files that hold the training parameters.
 
 ## Versions
@@ -82,7 +81,7 @@ models in Automatic1111.
 4. Switch to the `Dreambooth LoRA` tab and load one of the config files from the repo
     root directory.
 5. You might need to tweak the folder paths to be non-relative.
-    ![folders.png](site%2Ffolders.png)
+    ![folders.png](readme%2Ffolders.png)
 6. Hit `Train model`.
 7. Check the `output` folder for the results of the model training.
    * The `samples` directory will contain example images generated along the process and
@@ -158,7 +157,7 @@ that visualizes the learning rate and loss rate over time. This is super useful 
 fine-tuning your training parameters as you can correlate the values with the sample images
 being produced to find where good learning and loss rates coincide with good results and then
 iterate the training based off those values.
-![tensorboard.png](site%2Ftensorboard.png)
+![tensorboard.png](readme%2Ftensorboard.png)
 
 
 ## Using the generated models
@@ -170,11 +169,11 @@ iterate the training based off those values.
    version will do.
 4. Fire up Automatic1111 http://127.0.0.1:7860/.
 5. From the checkpoint list select the SD model.
-    ![checkpoint.png](site%2Fcheckpoint.png)
+    ![checkpoint.png](readme%2Fcheckpoint.png)
 6. Take your output LoRA file from the training earlier and drop it into the `models\LyCORIS` folder
     in the Automatic1111 install directory. There is a `LoRA` folder as well, but we want to use the
     folder specifically for LyCORIS variant LoRA.
 7. Enter a prompt using the `<lyco:{filename}:{weight}>` syntax.
    * For example: `masterpiece, best quality, 8k, drawing of a man in the beem style holding a laptop, <lyco:beem_style_1.3-000003:1>`
 8. Profit!
-![results.png](site%2Fresults.png)
+![results.png](readme%2Fresults.png)
